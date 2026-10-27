@@ -1,0 +1,26 @@
+[project]
+name = "PushTheT"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "lerobot[dataset]",
+    "av>=15.0.0,<16.0.0",
+    "scipy>=1.13.0",
+    "wandb",
+    "hydra-core",
+    "pyyaml",
+    "omegaconf",
+    "colorama",
+    "tqdm",
+    "opencv-python",
+    "matplotlib",
+    "lightning",
+    "click",
+    "moviepy",
+    "imageio",
+    "einops",
+    "wandb-osh",
+]

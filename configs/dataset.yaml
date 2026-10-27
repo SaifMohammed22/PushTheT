@@ -1,0 +1,4 @@
+repo: "lerobot/pusht"
+data_dir: "data/push_t"
+num_episodes: 206
+max_ep_length:  60 
