@@ -1,12 +1,17 @@
-from lerobot.datasets import LeRobotDataset, StreamingLeRobotDataset
+"""
+Download PushT dataset locally into data directory using LeRobotDataset or stream it without
+the need to download it locally using StreamingLeRobotDataset
+"""
 
+import sys
+from pathlib import Path
 
-def download_pusht(cfg, stream=False):
-    episodes = list(range(cfg.num_episodes))
-    if stream:
-        return StreamingLeRobotDataset(cfg.repo, episodes=episodes)
-    return LeRobotDataset(cfg.repo, root=cfg.data_dir, episodes=episodes)
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
+from pushthet.dataset.push_t import (  # noqa: E402
+    StreamingLeRobotDataset,
+    download_pusht,
+)
 
 
 if __name__ == "__main__":
@@ -15,7 +20,8 @@ if __name__ == "__main__":
     cfg = OmegaConf.load("configs/dataset.yaml")
     ds = download_pusht(cfg)
     if isinstance(ds, StreamingLeRobotDataset):
-        print(f"repo={cfg.repo} episodes={ds.num_episodes} frames={ds.num_frames} fps={ds.fps}")
+        print(
+            f"repo={cfg.repo} episodes={ds.num_episodes} frames={ds.num_frames} fps={ds.fps}")
     else:
         print(ds)
         print(f"num samples: {len(ds)}")

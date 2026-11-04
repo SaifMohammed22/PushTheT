@@ -2,3 +2,13 @@ repo: "lerobot/pusht"
 data_dir: "data/push_t"
 num_episodes: 206
 max_ep_length:  60 
+image_size: 224
+normalize_images: true
+imagenet_mean:
+  - 0.485
+  - 0.456
+  - 0.406
+imagenet_std:
+  - 0.229
+  - 0.224
+  - 0.225
