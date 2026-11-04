@@ -1,3 +1,7 @@
+"""
+Sanity check for W&B: 
+"""
+
 import random
 import wandb
 from omegaconf import OmegaConf
