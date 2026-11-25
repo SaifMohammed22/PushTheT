@@ -1,0 +1,5 @@
+repo: facebookresearch/dinov2
+model: dinov2_vits14
+embed_dim: 384
+num_patches: 256
+freeze: true

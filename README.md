@@ -1,5 +1,5 @@
 # PushTheT
-A World Model/Policy for PushT environment
+A DINO-World Model for PushT environment
 
 ## Dataset 
 I use the [PushT](https://huggingface.co/datasets/lerobot/pusht) dataset with 206 episodes and 25,650 frames. The dataset features are: \
