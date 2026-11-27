@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 
@@ -31,7 +32,8 @@ def plot_images(dataset, cfg, episode_bounds, rows=3, cols=8, episode_step=10):
         "Expert Push-T Demonstrations from LeRobot (sampled frames)", fontsize=12
     )
     plt.tight_layout()
-    plt.show()
+    os.makedirs("outputs", exist_ok=True)
+    plt.savefig("outputs/data.jpg")
 
 
 if __name__ == "__main__":

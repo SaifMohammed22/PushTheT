@@ -1,5 +1,7 @@
+import os
 import sys
 from pathlib import Path
+
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
@@ -45,7 +47,8 @@ def plot_features(images, features, ep_bounds):
         axes[1, i].imshow(fp); axes[1, i].set_title('DINO PCA', fontsize=9); axes[1, i].axis('off')
 
     fig.suptitle('DINO features on Push-T expert demonstrations', fontsize=12)
-    plt.show()
+    os.makedirs("outputs", exist_ok=True)
+    plt.savefig("outputs/dinov2_features.jpg")
 
 
 if __name__ == "__main__":

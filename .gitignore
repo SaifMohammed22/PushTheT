@@ -225,3 +225,6 @@ data/*
 
 # WandB
 wandb/
+
+# Visualization
+outputs/
